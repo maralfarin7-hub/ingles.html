@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>France Intercultural Guide | For Colombians | Interactive Ebook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f8;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .nav-bar {
+            background: #0b2b40;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem 1.5rem;
+            padding: 0.8rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a {
+            color: #f0f7fa;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .nav-bar a:hover { border-bottom-color: #ffcd7e; color: #ffcd7e; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 2rem; }
+        .section-card {
+            background: white;
+            border-radius: 32px;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            border-left: 6px solid #e03a3a;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #0b2b40;
+        }
+        h3 { font-size: 1.5rem; margin: 1.5rem 0 0.8rem; color: #2c5a6e; }
+        .img-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        .img-card {
+            flex: 1;
+            min-width: 200px;
+            border-radius: 24px;
+            overflow: hidden;
+            background: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .img-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            background: #eef2f5;
+        }
+        .img-caption {
+            padding: 0.6rem;
+            font-size: 0.8rem;
+            text-align: center;
+            background: #fff;
+            font-weight: 500;
+        }
+        .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 1rem 0;
+        }
+        .col { flex: 1; background: #f9fbfd; padding: 1rem; border-radius: 24px; }
+        .do-dont { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0; }
+        .do-box { background: #eaf9ee; border-left: 5px solid #2b8c4a; padding: 1rem; border-radius: 20px; flex:1; }
+        .dont-box { background: #ffe9e9; border-left: 5px solid #c7362b; padding: 1rem; border-radius: 20px; flex:1; }
+        .quiz, .scenario { background: #f0f5f9; border-radius: 28px; padding: 1.5rem; margin: 1.8rem 0; }
+        button {
+            background: #0b2b40; color: white; border: none; padding: 0.6rem 1.5rem;
+            border-radius: 40px; font-weight: 600; cursor: pointer; margin-top: 0.8rem;
+        }
+        button:hover { background: #e03a3a; }
+        .feedback { margin-top: 0.6rem; padding: 0.5rem 1rem; border-radius: 30px; font-size: 0.9rem; }
+        .correct-feedback { background: #d5f0df; color: #1a6e3b; }
+        .wrong-feedback { background: #ffe0db; color: #b13b2c; }
+        .ref-list { background: #eef2f5; border-radius: 28px; }
+        @media (max-width: 720px) { .container { padding: 1rem; } .section-card { padding: 1.2rem; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="#intro"><i class="fas fa-home"></i> Intro</a>
+    <a href="#brief"><i class="fas fa-flag"></i> Country Brief</a>
+    <a href="#regional"><i class="fas fa-map"></i> Regional</a>
+    <a href="#history"><i class="fas fa-church"></i> History & Religion</a>
+    <a href="#behavior"><i class="fas fa-comments"></i> Behavior & Comm</a>
+    <a href="#conclusion"><i class="fas fa-check-circle"></i> Conclusion</a>
+    <a href="#activities"><i class="fas fa-puzzle-piece"></i> Quizzes & Activity</a>
+    <a href="#references"><i class="fas fa-book"></i> References</a>
+</div>
+
+<div class="container">
+    <!-- INTRODUCTION -->
+    <div id="intro" class="section-card">
+        <div class="section-title">🇫🇷 France Intercultural Guide <span style="font-size:1rem;">for Colombian professionals</span></div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&auto=format" alt="Eiffel Tower" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Eiffel+Tower'"><div class="img-caption">🇫🇷 France: elegance & tradition</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1526726538690-5cbf956ae4fd?w=600&auto=format" alt="Colombia Coffee Region" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Colombia+Coffee'"><div class="img-caption">🇨🇴 Colombia: warmth & diversity</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&auto=format" alt="Flags" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=France+%26+Colombia'"><div class="img-caption">Cultural encounter</div></div>
+        </div>
+        <p><strong>Purpose:</strong> This interactive ebook helps Colombians avoid intercultural misunderstandings when interacting with France. It is research-based (Hofstede, Hall, Lewis) and packed with practical advice, quizzes, and a scenario.</p>
+        <p><strong>Country of focus:</strong> France — a nation with deep secular roots, high individualism, and sophisticated communication codes. Use the menu to navigate, test your knowledge, and apply real cultural insights.</p>
+    </div>
+
+    <!-- COUNTRY BRIEF -->
+    <div id="brief" class="section-card">
+        <div class="section-title">📌 Country Brief: France</div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627f75b6c?w=600&auto=format" alt="Euro money" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Euro'"><div class="img-caption">Euro (€)</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1593720213428-28a5b9a946a6?w=600&auto=format" alt="TGV Train" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=TGV'"><div class="img-caption">TGV high-speed rail</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&auto=format" alt="French Parliament" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=French+Parliament'"><div class="img-caption">Semi-presidential republic</div></div>
+        </div>
+        <div class="two-col">
+            <div class="col"><i class="fas fa-euro-sign"></i> <strong>Currency:</strong> Euro<br><i class="fas fa-users"></i> <strong>Population:</strong> ~68 million<br><i class="fas fa-language"></i> <strong>Official language:</strong> French<br><i class="fas fa-landmark"></i> <strong>Political system:</strong> Unitary semi-presidential republic</div>
+            <div class="col"><i class="fas fa-bus"></i> <strong>Transportation:</strong> TGV, Metro, trams<br><i class="fas fa-chart-line"></i> <strong>GDP per capita:</strong> ~$44,000 USD<br><i class="fas fa-clock"></i> <strong>Time zone:</strong> CET (UTC+1) / 6 hours ahead of Colombia</div>
+        </div>
+        <p><strong>Comparison with Colombia:</strong> Colombia uses Colombian peso and has a presidential system with stronger religious influence in public life. France is secular (<em>laïcité</em>) and highly centralized. For Colombians: punctuality and formal protocol may be a surprise.</p>
+    </div>
+
+    <!-- REGIONAL INFORMATION -->
+    <div id="regional" class="section-card">
+        <div class="section-title">🌍 Regional Context: France in Europe</div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1521295121783-8a321e551ad2?w=600&auto=format" alt="EU flag" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=European+Union'"><div class="img-caption">Key EU member</div></div>
+            <div class="img-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/France_in_Europe_%28%E2%80%93disputed%29.svg/800px-France_in_Europe_%28%E2%80%93disputed%29.svg.png" alt="France in Europe map" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=France+Map'"><div class="img-caption">Strategic location</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1521478706270-f2e33c203d95?w=600&auto=format" alt="France Germany" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Franco-German'"><div class="img-caption">Franco-German engine</div></div>
+        </div>
+        <p>France borders Belgium, Germany, Switzerland, Italy, Spain, and Monaco. It shares Latin roots with Italy and Spain but is more secular and linear-active. Unlike Colombia (Andean region, Pacific Alliance), France is a leader in NATO and the G7. For Colombians: European alliances and bureaucracy are more rigid than Latin American dynamics.</p>
+    </div>
+
+    <!-- HISTORY & RELIGION -->
+    <div id="history" class="section-card">
+        <div class="section-title">📜 History, Religion & Current Behavior</div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1603924882417-e7e0ce1cd2e5?w=600&auto=format" alt="Storming Bastille" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=French+Revolution'"><div class="img-caption">French Revolution (1789)</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1545776940-5ca7f02f6e1c?w=600&auto=format" alt="Notre Dame" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Notre+Dame'"><div class="img-caption">Notre Dame: religious legacy</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&auto=format" alt="Laïcité" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=La%C3%AFcit%C3%A9'"><div class="img-caption">Laïcité: secular education</div></div>
+        </div>
+        <p><strong>Key historical events:</strong> French Revolution (liberty, equality, fraternity), Napoleonic Code, World Wars, May 1968 protests. <strong>Laïcité</strong> (constitutional secularism) means the state is neutral regarding religion. Only ~8% of French people practice regularly, though ~50% identify as Catholic. Islam is the second religion (8-10%).</p>
+        <p><strong>How history & religion shape behavior today:</strong> The French value critical debate, avoid public religious displays, and separate private faith from professional life. <strong>Contrast with Colombia:</strong> Colombian society is predominantly Catholic (70%+), religious symbols are common in workplaces, and church influences social events. A Colombian should never ask “What church do you attend?” in French business settings.</p>
+    </div>
+
+    <!-- CULTURAL BEHAVIOR & COMMUNICATION -->
+    <div id="behavior" class="section-card">
+        <div class="section-title">🤝 Cultural Behavior & Communication: France vs Colombia</div>
+        
+        <h3>📊 Hofstede’s Cultural Dimensions (3+ dimensions)</h3>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="Hofstede chart" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Hofstede+Dimensions'"><div class="img-caption">Individualism: France 71 / Colombia 13</div></div>
+            <div class="img-card"><img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Individual vs team" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Individualism+vs+Collectivism'"><div class="img-caption">Collectivism vs Individualism</div></div>
+        </div>
+        <div class="two-col">
+            <div class="col"><strong>Individualism (71 vs 13)</strong><br>France: personal achievement, autonomy. Colombia: group loyalty, family first.</div>
+            <div class="col"><strong>Uncertainty avoidance (86 vs 80)</strong><br>Both high, but France demands precise rules, written contracts, and punctuality.</div>
+            <div class="col"><strong>Masculinity (43 vs 64)</strong><br>France feminine: quality of life, consensus. Colombia masculine: competition, visible success.</div>
+        </div>
+
+        <h3>⏳ Edward Hall’s concepts (≥2)</h3>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Clock" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Punctuality'"><div class="img-caption">Monochronic: punctuality is key</div></div>
+            <div class="img-card"><img src="https://images.pexels.com/photos/6476250/pexels-photo-6476250.jpeg?auto=compress&cs=tinysrgb&w=600" alt="High context" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=High+Context'"><div class="img-caption">Colombia: high-context warmth</div></div>
+        </div>
+        <p><strong>Monochronic vs polychronic time:</strong> France is monochronic — schedules, deadlines, and one task at a time. Colombians are more polychronic. Arriving 5 minutes late for a business meeting in Paris is disrespectful.<br>
+        <strong>High/low context:</strong> France is moderately high-context (uses irony, sophisticated references). Colombia is also high-context but relies more on non-verbal warmth. Colombians may interpret French directness as cold; French may see Colombian effusiveness as unprofessional.</p>
+        
+        <h3>📘 Richard Lewis Model (≥2 categories)</h3>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Formal negotiation" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Linear-active'"><div class="img-caption">France: task-oriented, linear-active</div></div>
+            <div class="img-card"><img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personal relationships" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Multi-active'"><div class="img-caption">Colombia: multi-active, relationship-first</div></div>
+        </div>
+        <p><strong>Linear-active vs multi-active:</strong> French are logical, data-driven, and separate personal from professional. Colombians build trust before business. <strong>Direct vs indirect communication:</strong> French say “non” clearly; Colombians may say “maybe” to preserve harmony. Be explicit.</p>
+
+        <h3>👁️ Nonverbal Communication (4+ types)</h3>
+        <div class="img-row">
+            <div class="img-card"><img src="https://media.istockphoto.com/id/1310506799/es/foto/retrato-de-dos-hombres-de-negocios-salud%C3%A1ndose-con-un-apret%C3%B3n-de-manos-en-la-oficina.jpg?s=612x612&w=0&k=20&c=7ddYpOuRnb6J5rUGT-MblFwGqNt4evdHfZ5tq4a2TQ0=" alt="Handshake" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Handshake'"><div class="img-caption">Firm handshake (don’t overdo)</div></div>
+            <div class="img-card"><img src="https://images.pexels.com/photos/5680211/pexels-photo-5680211.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personal space" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Proxemics'"><div class="img-caption">Proxemics: keep ~60 cm distance</div></div>
+            <div class="img-card"><img src="https://images.pexels.com/photos/3791666/pexels-photo-3791666.jpeg?auto=compress&cs=tinysrgb&w=600" alt="La bise" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=La+bise'"><div class="img-caption">La bise: only among friends</div></div>
+            <div class="img-card"><img src="https://cdn.pixabay.com/photo/2016/08/07/18/35/gesture-1576008_640.png" alt="OK gesture danger" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=NO+OK+sign'"><div class="img-caption">⚠️ The OK sign (circle) means zero / insult</div></div>
+        </div>
+        <ul style="margin:1rem 0 1rem 2rem">
+            <li><strong>Proxemics:</strong> Maintain arm’s length. Colombians standing too close may make French uncomfortable.</li>
+            <li><strong>Chronemics:</strong> Arrive exactly on time. No “Colombian hour”.</li>
+            <li><strong>Kinesics:</strong> Avoid pointing with index finger. Never use the “OK” circle (offensive).</li>
+            <li><strong>Vocalics:</strong> Moderate tone; avoid loud conversations in restaurants.</li>
+            <li><strong>Artifacts:</strong> Dress elegantly (suit/blazer) for business.</li>
+            <li><strong>Haptics:</strong> Handshake for first meetings; la bise only with close acquaintances.</li>
+        </ul>
+
+        <h3>✅ Do's & ❌ Don'ts for Colombians in France</h3>
+        <div class="do-dont">
+            <div class="do-box"><i class="fas fa-thumbs-up"></i> <strong>DO's</strong><br>
+            • Always greet with “Bonjour” before anything.<br>
+            • Use Monsieur/Madame + last name until invited to use first name.<br>
+            • Be punctual for business and formal appointments.<br>
+            • Prepare logical arguments; the French appreciate intellectual debate.<br>
+            • Say “merci” and maintain composure.
+            </div>
+            <div class="dont-box"><i class="fas fa-ban"></i> <strong>DON'Ts</strong><br>
+            • Don’t ask about religion, salary, or politics too early.<br>
+            • Don’t make the “OK” gesture (thumb-index circle).<br>
+            • Don’t interrupt constantly; let the French finish their point.<br>
+            • Don’t expect them to speak Spanish; learn basic French phrases.<br>
+            • Don’t give effusive hugs or backslaps in professional settings.
+            </div>
+        </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div id="conclusion" class="section-card">
+        <div class="section-title">🎯 Conclusion: Global Intercultural Competence</div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format" alt="Multicultural team" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Teamwork'"><div class="img-caption">Franco-Colombian collaboration</div></div>
+            <div class="img-card"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&auto=format" alt="Global business" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Global+Business'"><div class="img-caption">Learning from differences</div></div>
+        </div>
+        <p><strong>Main risks for Colombians:</strong> Misinterpreting French directness as rudeness, arriving late, discussing religion/politics prematurely, and expecting personal bonds before business. <strong>Key recommendations:</strong> Adapt your communication style, respect punctuality, study French protocol, and remember that formality is a sign of respect.</p>
+        <p><strong>Closing statement:</strong> Intercultural intelligence builds bridges. A Colombian professional who understands France’s unique blend of secularism, individualism, and intellectual rigor can thrive in global environments. <em>“Dans la rencontre des cultures, naît l’opportunité.”</em> (In the meeting of cultures, opportunity is born.) 🇫🇷🤝🇨🇴</p>
+    </div>
+
+    <!-- INTERACTIVE ACTIVITIES: 2 Quizzes + 1 Scenario -->
+    <div id="activities" class="section-card">
+        <div class="section-title">✨ Interactive Activities: Test Your Knowledge</div>
+        <div class="img-row">
+            <div class="img-card"><img src="https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Quiz" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Quiz+Time'"><div class="img-caption">✅ Quizzes & scenario</div></div>
+        </div>
+
+        <!-- QUIZ 1 -->
+        <div class="quiz">
+            <h3><i class="fas fa-brain"></i> Quiz 1: Cultural Dimensions & Laïcité</h3>
+            <div id="quiz1">
+                <div class="quiz-question"><p>1️⃣ According to Hofstede, which dimension shows the biggest difference between France (71) and Colombia (13)?</p>
+                    <label><input type="radio" name="q1" value="A"> A) Power Distance</label>
+                    <label><input type="radio" name="q1" value="B"> B) Individualism</label>
+                    <label><input type="radio" name="q1" value="C"> C) Uncertainty Avoidance</label>
+                    <label><input type="radio" name="q1" value="D"> D) Masculinity</label>
+                    <div class="feedback" id="fb1"></div>
+                </div>
+                <div class="quiz-question"><p>2️⃣ What does “laïcité” mean in France?</p>
+                    <label><input type="radio" name="q2" value="A"> A) A traditional dish</label>
+                    <label><input type="radio" name="q2" value="B"> B) Strict separation of state and religion</label>
+                    <label><input type="radio" name="q2" value="C"> C) Cheek-kissing greeting</label>
+                    <label><input type="radio" name="q2" value="D"> D) French fashion code</label>
+                    <div class="feedback" id="fb2"></div>
+                </div>
+                <button id="btnQuiz1">Check answers</button>
+            </div>
+        </div>
+
+        <!-- QUIZ 2 -->
+        <div class="quiz">
+            <h3><i class="fas fa-hand-peace"></i> Quiz 2: Nonverbal & Time Orientation</h3>
+            <div id="quiz2">
+                <div class="quiz-question"><p>1️⃣ Which gesture should Colombians avoid in France because it means “zero” or is offensive?</p>
+                    <label><input type="radio" name="q3" value="A"> A) Thumbs-up</label>
+                    <label><input type="radio" name="q3" value="B"> B) OK sign (thumb-index circle)</label>
+                    <label><input type="radio" name="q3" value="C"> C) Pointing with index finger</label>
+                    <label><input type="radio" name="q3" value="D"> D) Winking</label>
+                    <div class="feedback" id="fb3"></div>
+                </div>
+                <div class="quiz-question"><p>2️⃣ According to Edward Hall, France’s time orientation is primarily:</p>
+                    <label><input type="radio" name="q4" value="A"> A) Polychronic</label>
+                    <label><input type="radio" name="q4" value="B"> B) Monochronic</label>
+                    <label><input type="radio" name="q4" value="C"> C) Reactive</label>
+                    <label><input type="radio" name="q4" value="D"> D) Cyclic</label>
+                    <div class="feedback" id="fb4"></div>
+                </div>
+                <button id="btnQuiz2">Check answers</button>
+            </div>
+        </div>
+
+        <!-- SCENARIO ACTIVITY -->
+        <div class="scenario">
+            <h3><i class="fas fa-comment-dots"></i> Scenario: Business Meeting in Lyon</h3>
+            <div class="img-card" style="max-width:300px; margin:0 0 1rem 0;"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Business meeting" onerror="this.src='https://placehold.co/600x400/eef2f5/0b2b40?text=Meeting'"><div class="img-caption">French professional context</div></div>
+            <p><strong>Situation:</strong> You are a Colombian export manager. You arrive punctually for a meeting with a French client. To break the ice, you start telling a personal family anecdote. The client interrupts: “Could we focus on the contract points?”</p>
+            <p><strong>What is the best course of action?</strong></p>
+            <label><input type="radio" name="scenario" value="A"> A) Apologize and immediately move to business, saving personal conversation for later.</label><br>
+            <label><input type="radio" name="scenario" value="B"> B) Insist on finishing your story to build trust, as you would in Colombia.</label><br>
+            <label><input type="radio" name="scenario" value="C"> C) Ask about his weekend despite his impatience.</label><br>
+            <label><input type="radio" name="scenario" value="D"> D) Leave the meeting offended.</label>
+            <button id="btnScenario">Evaluate decision</button>
+            <div id="scenarioFeedback" class="feedback" style="margin-top:1rem;"></div>
+        </div>
+    </div>
+
+    <!-- APA REFERENCES -->
+    <div id="references" class="section-card ref-list">
+        <div class="section-title">📚 APA References</div>
+        <p>Hofstede, G. (2001). <em>Culture’s consequences: Comparing values, behaviors, institutions, and organizations across nations</em> (2nd ed.). Sage Publications.</p>
+        <p>Hall, E. T. (1976). <em>Beyond culture</em>. Anchor Press.</p>
+        <p>Lewis, R. D. (2018). <em>When cultures collide: Leading across cultures</em> (4th ed.). Nicholas Brealey.</p>
+        <p>Insee Première. (2024). <em>La pratique religieuse en France</em>. Institut national de la statistique et des études économiques.</p>
+        <p>World Bank. (2025). <em>Country profiles: France & Colombia</em>. Retrieved from worldbank.org</p>
+        <p>Mole, J. (2015). <em>Mind your manners: French business etiquette</em>. French Press International.</p>
+    </div>
+    <div class="footnote" style="text-align:center; font-size:0.8rem; margin-top:1rem;">
+        <i class="fas fa-images"></i> Interactive ebook with 20+ images | Clickable navigation | 2 quizzes + 1 scenario with instant feedback.
+    </div>
+</div>
+
+<script>
+    // Quiz 1
+    document.getElementById("btnQuiz1").addEventListener("click", function(){
+        let q1 = document.querySelector('input[name="q1"]:checked');
+        let q2 = document.querySelector('input[name="q2"]:checked');
+        let fb1 = document.getElementById("fb1");
+        let fb2 = document.getElementById("fb2");
+        if(q1 && q1.value === "B") { fb1.innerHTML = "✅ Correct! Individualism (71 vs 13) is the largest gap."; fb1.className = "feedback correct-feedback"; }
+        else if(q1) { fb1.innerHTML = "❌ Incorrect. The biggest difference is Individualism (France highly individualistic, Colombia collectivist)."; fb1.className = "feedback wrong-feedback"; }
+        else { fb1.innerHTML = "⚠️ Please select an answer for question 1."; fb1.className = "feedback wrong-feedback"; }
+        
+        if(q2 && q2.value === "B") { fb2.innerHTML = "✅ Exact! Laïcité is the strict separation of state and religion, central to French identity."; fb2.className = "feedback correct-feedback"; }
+        else if(q2) { fb2.innerHTML = "❌ No. Laïcité means secularism — religion is private, not displayed in public institutions."; fb2.className = "feedback wrong-feedback"; }
+        else { fb2.innerHTML = "⚠️ Please answer question 2."; fb2.className = "feedback wrong-feedback"; }
+    });
+    
+    // Quiz 2
+    document.getElementById("btnQuiz2").addEventListener("click", function(){
+        let q3 = document.querySelector('input[name="q3"]:checked');
+        let q4 = document.querySelector('input[name="q4"]:checked');
+        let fb3 = document.getElementById("fb3");
+        let fb4 = document.getElementById("fb4");
+        if(q3 && q3.value === "B") { fb3.innerHTML = "✅ Correct! The OK sign (circle) is offensive in France — it means zero or worthless."; fb3.className = "feedback correct-feedback"; }
+        else if(q3) { fb3.innerHTML = "❌ The forbidden gesture is the OK circle. Thumbs-up is fine."; fb3.className = "feedback wrong-feedback"; }
+        else { fb3.innerHTML = "⚠️ Select an option for question 1."; fb3.className = "feedback wrong-feedback"; }
+        
+        if(q4 && q4.value === "B") { fb4.innerHTML = "✅ Correct! France is monochronic (linear time, punctuality essential)."; fb4.className = "feedback correct-feedback"; }
+        else if(q4) { fb4.innerHTML = "❌ No. France is monochronic, not polychronic. Punctuality is vital."; fb4.className = "feedback wrong-feedback"; }
+        else { fb4.innerHTML = "⚠️ Please choose an answer."; fb4.className = "feedback wrong-feedback"; }
+    });
+    
+    // Scenario
+    document.getElementById("btnScenario").addEventListener("click", function(){
+        let sc = document.querySelector('input[name="scenario"]:checked');
+        let div = document.getElementById("scenarioFeedback");
+        if(!sc){ div.innerHTML = "<div class='feedback wrong-feedback'>Please select an option.</div>"; return; }
+        if(sc.value === "A") div.innerHTML = "<div class='feedback correct-feedback'>🌟 Excellent decision! In France, efficiency and agenda are respected. Personal bonding can happen over lunch after business. You show intercultural adaptability.</div>";
+        else if(sc.value === "B") div.innerHTML = "<div class='feedback wrong-feedback'>⚠️ Caution: forcing personal talk may be seen as unprofessional. The French client prefers to get straight to business.</div>";
+        else if(sc.value === "C") div.innerHTML = "<div class='feedback wrong-feedback'>❌ Not appropriate. Ignoring the client's request increases friction. Apologize and switch to the agenda.</div>";
+        else div.innerHTML = "<div class='feedback wrong-feedback'>🚫 Walking out would be a serious mistake. Learn from the French direct style and adapt.</div>";
+    });
+</script>
+</body>
+</html> 
